@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Hero from '../assets/bg-service.png'
 import section from '../assets/service-bg2.png';
-import web from '../assets/service-bg1.png';
+import web from '../assets/service-bg.png';
 import Cloud from '../assets/service-bg3.png';
 import brand from '../assets/service-bg2.png';
 import Marquee from 'react-fast-marquee';
