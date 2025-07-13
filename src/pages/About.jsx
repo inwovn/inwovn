@@ -31,52 +31,45 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white mt-10">
+    <div className="min-h-screen bg-black text-white pt-10">
       {/* Hero Section */}
-      <section className="relative bg-black text-white h-[70vh] md:h-[80vh] lg:h-[90vh] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden">
-        <img src={heroBg} alt="Hero background" className="absolute inset-0 w-full h-full object-cover opacity-20" />
+      <section className="relative bg-black text-white min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-12 overflow-hidden">
+        <img src={heroBg} alt="Hero background" className="absolute inset-0 w-full h-full object-cover opacity-20 z-0" />
 
-        <div className="relative z-10 text-center px-4">
-          <p className="max-w-4xl mx-auto text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed mb-10 mt-10">
-            We believe innovation should be inclusive, and we strive to build
-            tools, services, and experiences that simplify tech for all.
+        <div className="relative z-10 text-center w-full">
+          <p className="max-w-3xl mx-auto text-gray-300 text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed mb-6 sm:mb-8 mt-8 sm:mt-12 px-2">
+            We believe innovation should be inclusive, and we strive to build tools, services, and experiences that simplify tech for all.
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto mt-10">
-            <div className="bg-black/80 p-6 rounded-lg border border-gray-700 backdrop-blur-md hover:scale-105 transition-transform">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto px-4 sm:px-0 mt-8 sm:mt-10">
+            <div className="bg-black/80 p-6 rounded-lg border border-gray-700 backdrop-blur-md hover:scale-[1.03] transition-transform">
               <h2 className="text-green-400 text-xl md:text-2xl font-bold mb-3">
                 OUR MISSION
               </h2>
               <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                To make technology accessible, understandable, and empowering
-                for everyone, regardless of background, scale, or industry.
+                To make technology accessible, understandable, and empowering for everyone, regardless of background, scale, or industry.
               </p>
-              <p className="text-gray-400 italic text-sm mt-2">
-                - Sharan Vikaas
-              </p>
+              <p className="text-gray-400 italic text-sm mt-2">- Sharan Vikaas</p>
             </div>
 
-            <div className="bg-black/80 p-6 rounded-lg border border-gray-700 backdrop-blur-md hover:scale-105 transition-transform">
+            <div className="bg-black/80 p-6 rounded-lg border border-gray-700 backdrop-blur-md hover:scale-[1.03] transition-transform">
               <h2 className="text-green-400 text-xl md:text-2xl font-bold mb-3">
                 OUR VISION
               </h2>
               <p className="text-gray-300 text-sm md:text-base leading-relaxed">
-                To lead a new wave of inclusive digital transformation—built by
-                creatives, coders, and changemakers who care.
+                To lead a new wave of inclusive digital transformation—built by creatives, coders, and changemakers who care.
               </p>
-              <p className="text-gray-400 italic text-sm mt-2">
-                - Vevin Raja Kumar
-              </p>
+              <p className="text-gray-400 italic text-sm mt-2">- Vevin Raja Kumar</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Our Team */}
-      <section className="bg-black text-white py-12 md:py-16 lg:py-20 px-4 sm:px-6 lg:px-12">
+      <section className="bg-black text-white pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:px-12">
         <div className="max-w-7xl mx-auto">
-          <div className="mb-12 md:mb-16 text-center">
-            <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+          <div className="mb-10 sm:mb-14 text-center">
+            <h2 className="text-white text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
               Our Team
             </h2>
           </div>
@@ -92,18 +85,18 @@ export default function About() {
                     aria-label={`${member.name} photo`}
                     className="w-full h-full bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center"
                   >
-                    <div className="w-16 h-16 md:w-20 md:h-20 bg-gray-500 rounded-full flex items-center justify-center">
-                      <span className="text-white text-xl md:text-2xl font-bold">
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gray-500 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xl sm:text-2xl font-bold">
                         {member.name.charAt(0)}
                       </span>
                     </div>
                   </div>
                 </div>
                 <div className="text-center">
-                  <h3 className="text-white font-bold text-lg md:text-xl mb-1">
+                  <h3 className="text-white font-bold text-lg sm:text-xl mb-1">
                     {member.name}
                   </h3>
-                  <p className="text-gray-300 text-sm md:text-base">
+                  <p className="text-gray-400 text-sm sm:text-base">
                     {member.role}
                   </p>
                 </div>
