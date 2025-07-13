@@ -40,7 +40,7 @@ export default function About() {
       {/* Hero Section */}
       <section className="relative bg-black text-white h-[70vh] md:h-[80vh] lg:h-[90vh] flex items-center justify-center px-4 md:px-6 lg:px-12 overflow-hidden">
   {/* Background Image */}
-  <img src={heroBg} alt="Hero background" className="absolute inset-0 w-full h-full object-cover" />
+  <img src={heroBg} alt="Hero background" className="absolute inset-0 w-full h-full object-cover opacity-20" />
 
 
   {/* Hero Content */}  

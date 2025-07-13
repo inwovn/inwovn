@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import Hero from '../assets/service-bg4.jpg'
+import Hero from '../assets/bg-service.png'
 import section from '../assets/service-bg2.png';
 import web from '../assets/service-bg1.png';
 import Cloud from '../assets/service-bg3.png';
 import brand from '../assets/service-bg2.png';
+import Marquee from 'react-fast-marquee';
 
 
 
@@ -192,21 +193,26 @@ export default function InwovnServices() {
 
       {/* CTA Section */}
       <section className="bg-black px-4 md:px-6 lg:px-8 py-8 md:py-12">
-        <div className="max-w-7xl mx-auto text-center">
-          <div className="flex flex-wrap justify-center items-center gap-2 text-lg md:text-xl">
-            <span className="text-white">MAKE IT HAPPEN</span>
+        
+      {/* INFINITE MARQUEE */}
+           <div className="bg-black py-4">
+      <Marquee
+        gradient={true}
+        gradientColor={[0, 0, 0]} // black gradient to blend with bg
+        gradientWidth={80}
+        speed={60}
+        pauseOnHover={true}
+        direction="left"
+        className="text-[clamp(1.5rem,2vw,2rem)] font-bold text-green-400"
+      >
+        {[...Array(12)].map((_, i) => (
+          <span key={i} className="mx-6">
+            <span className="text-white">MAKE IT HAPPEN</span>{" "}
             <span className="text-green-400">!!!</span>
-            <span className="text-white">MAKE IT HAPPEN</span>
-            <span className="text-green-400">!!!</span>
-            <span className="text-white">MAKE IT HAPPEN</span>
-            <span className="text-green-400">!!!</span>
-            <span className="text-white">MAKE IT HAPPEN</span>
-            <span className="text-green-400">!!!</span>
-            <span className="text-white">MAKE IT HAPPEN</span>
-            <span className="text-green-400">!!!</span>
-            <span className="text-white">MAKE IT HAPPEN</span>
-          </div>
-        </div>
+          </span>
+        ))}
+      </Marquee>
+    </div>
       </section>
     </div>
   );
