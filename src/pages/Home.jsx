@@ -11,13 +11,34 @@ const INWOVNHomepage = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubscribe = () => {
-    if (!email.trim()) return alert("Please enter your email address.");
-    if (!isSubscribed) return alert("Please agree to receive the newsletter.");
-    alert(`Subscribed with: ${email}`);
+    const handleSubscribe = async () => {
+  const endpoint = "https://script.google.com/macros/s/AKfycbx6cjr26ziFX6_cVOTyQGknKe01K8oYp2pyaUuTIgT2HSPs7l-rmA0EpOGjmfAwqTUm/exec"; // use your actual script URL
+
+  const payload = {
+      subscribed: isSubscribed,
+      email: email,
+  };
+
+  try {
+    await fetch(endpoint, {
+      method: "POST",
+      mode: "no-cors", // to prevent CORS error (limits response)
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    alert("Subscribed successfully!");
     setEmail("");
     setIsSubscribed(false);
-  };
+  } catch (err) {
+    alert("Something went wrong. Please try again.");
+    console.error(err);
+  }
+};
+
+  
 
   const services = [
     {
