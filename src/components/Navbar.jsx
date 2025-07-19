@@ -20,7 +20,7 @@ export default function Navbar() {
           <img
             src={logo}
             alt="INWOVN Logo"
-            className="h-10 md:h-12 sm:h-10 w-auto" // ✅ Responsive height
+            className="h-10 md:h-12  w-auto" // ✅ Responsive height
           />
         </Link>
 
